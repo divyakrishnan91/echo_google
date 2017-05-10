@@ -1,0 +1,23 @@
+{
+  "name": "google_sample",
+  "version": "1.0.0",
+  "description": "google echo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "hey i am copy cat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyakrishnan91/echo_google.git"
+  },
+  "keywords": [
+    "copy",
+    "cat"
+  ],
+  "author": "DIvya Krishnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divyakrishnan91/echo_google/issues"
+  },
+  "homepage": "https://github.com/divyakrishnan91/echo_google#readme"
+}
