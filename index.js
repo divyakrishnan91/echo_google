@@ -65,7 +65,7 @@ restService.post('/ai', function(request, response){
 		 //res.send(datas);
 		 for(var i=0; i<datas.length; i++){
 		 	console.log("inside for");
-		 	if(datas[i].week.current == 1){
+		 	if(datas[i].currentweek == 1){
 		 		console.log("inside if",datas[i]);
 		 		msg = datas[i].yourbody;
 		 	}
@@ -90,7 +90,7 @@ restService.post('/ai', function(request, response){
                  //res.send(datas);
                  for(var i=0; i<datas.length; i++){
                         console.log("inside for");
-                        if(datas[i].week.current == 1){
+                        if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
                                 msg = "Hey mom! Here is what I found . Your baby should be growing and your baby's length is " + datas[i].babydevelopment + "baby size is " + datas[i].babysize + "and weight is " + datas[i].weight ;
                         }
@@ -114,7 +114,7 @@ restService.post('/ai', function(request, response){
                  //res.send(datas);
                  for(var i=0; i<datas.length; i++){
                         console.log("inside for");
-                        if(datas[i].week.current == 1){
+                        if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
                                 msg = datas[i].babydevelopment;
 				
