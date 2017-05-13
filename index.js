@@ -31,7 +31,7 @@ restService.post('/ai', function(request, response){
   if (request.body.result.action === 'weather') {
     var city = request.body.result.parameters['geo-city'];
     var appid = 'de86b67ea402829c5b1333fc3d7caee6';
-    var msg = 'Hey I am a default message';
+    var msg = '';
     console.log(city);
     var restUrl = 'http://api.openweathermap.org/data/2.5/weather?APPID='+appid+'&q='+city;
 
@@ -53,7 +53,7 @@ restService.post('/ai', function(request, response){
       }})
   } else if(request.body.result.action === 'momweekinfo') {
   		console.log("sharing weekinfo");
-		var msg = 'Hey I am a default msg';
+		var msg = '';
 		 var ref = firebase.database().ref("/weeklyinfo");
 		
 		ref.once('value')
@@ -78,7 +78,7 @@ restService.post('/ai', function(request, response){
 
  }  else if(request.body.result.action === 'babyaction') {
                 console.log("sharing weekinfo");
-                var msg = 'default message';
+                var msg = '';
                  var ref = firebase.database().ref("/weeklyinfo");
 
                 ref.once('value')
