@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/divyakrishnan91/echo_google/issues"
   },
-  "homepage": "https://github.com/divyakrishnan91/echo_google#readme"
+  "homepage": "https://github.com/divyakrishnan91/echo_google#readme",
+  "dependencies": {
+    "apiai": "^4.0.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "firebase": "^3.9.0",
+    "mongodb": "^2.2.26",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {}
 }
