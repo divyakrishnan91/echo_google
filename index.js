@@ -125,7 +125,7 @@ restService.post('/ai', function(request, response){
                   speech: msg,
                   displayText: msg,
                   source: 'echo-google'});
-
+}
 });
 
 restService.post('/echo', function(req, res) {
