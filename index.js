@@ -44,7 +44,7 @@ restService.post('/ai', function(request, response){
         return response.json({
           speech: msg,
           displayText: msg,
-          source: 'weather'});
+          source: 'echo-google'});
       } else {
         return response.status(400).json({
           status: {
@@ -74,7 +74,7 @@ restService.post('/ai', function(request, response){
   			return response.json({
 	          speech: msg,
 	          displayText: msg,
-	          source: 'momweekinfo'});
+	          source: 'echo-google'});
 
  }  else if(request.body.result.action === 'babyaction') {
                 console.log("sharing weekinfo");
@@ -99,7 +99,7 @@ restService.post('/ai', function(request, response){
                         return response.json({
                   speech: msg,
                   displayText: msg,
-                  source: 'momweekinfo'});
+                  source: 'echo-google'});
   }  else if(request.body.result.action === 'babydev') {
                 console.log("sharing weekinfo");
                 var msg = '';
@@ -124,7 +124,7 @@ restService.post('/ai', function(request, response){
                         return response.json({
                   speech: msg,
                   displayText: msg,
-                  source: 'momweekinfo'});
+                  source: 'echo-google'});
 
 });
 
@@ -133,7 +133,7 @@ restService.post('/echo', function(req, res) {
     return res.json({
         speech: speech,
         displayText: speech,
-        source: 'webhook-echo-sample'
+        source: 'echo-google'
     });
 });
 
