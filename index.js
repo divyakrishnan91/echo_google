@@ -126,7 +126,7 @@ restService.post('/ai', function(request, response){
                         console.log("inside for");
                         if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
-                                msg = "Here are the common symptoms durring"+ datas[i].week + " " + datas[i].sydata +".We recommend you to consult your doctor if you have any other issues" ;
+                                msg = "Here are the common symptoms during week "+ datas[i].week + ". " + datas[i].sydata +". We recommend you to consult your doctor if you have any other issues" ;
                           return response.json({
                   speech: msg,
                   displayText: msg,
