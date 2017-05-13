@@ -58,8 +58,6 @@ restService.post('/ai', function(request, response){
 		
 		ref.once('value')
 		 .then(function (snap) {
-		 console.log('snap.val()', snap.val());
-		 console.log("req.body", req.body);
 		 var datas = snap.val();
 		 //res.send(datas);
 		 for(var i=0; i<datas.length; i++){
@@ -86,10 +84,7 @@ restService.post('/ai', function(request, response){
 
                 ref.once('value')
                  .then(function (snap) {
-                 console.log('snap.val()', snap.val());
-                 console.log("req.body", req.body);
                  var datas = snap.val();
-                 console.log("datas", datas);
                  //res.send(datas);
                  for(var i=0; i<datas.length; i++){
                         console.log("inside for");
@@ -110,10 +105,7 @@ restService.post('/ai', function(request, response){
 
                 ref.once('value')
                  .then(function (snap) {
-                 console.log('snap.val()', snap.val());
-                 console.log("req.body", req.body);
                  var datas = snap.val();
-                 console.log("datas", datas);
                  //res.send(datas);
                  for(var i=0; i<datas.length; i++){
                         console.log("inside for");
