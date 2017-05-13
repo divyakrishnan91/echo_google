@@ -68,13 +68,17 @@ restService.post('/ai', function(request, response){
 		 	if(datas[i].currentweek == 1){
 		 		console.log("inside if",datas[i]);
 		 		msg = datas[i].yourbody;
+				return response.json({
+                  speech: msg,
+                  displayText: msg,
+                  source: 'echo-google'});
 		 	}
 		 }
 		});
-  			return response.json({
-	          speech: msg,
-	          displayText: msg,
-	          source: 'echo-google'});
+  		//	return response.json({
+	         // speech: msg,
+	          //displayText: msg,
+	          //source: 'echo-google'});
 
  }  else if(request.body.result.action === 'babyaction') {
                 console.log("sharing weekinfo");
