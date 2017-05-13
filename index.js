@@ -15,13 +15,13 @@ restService.use(bodyParser.urlencoded({
 }));
 
  var config = {
-    apiKey: "AIzaSyDthGUbe0AcLRsBRQyIjf12LGDqjHp8aNY",
-    authDomain: "savemom-webapp-admin.firebaseapp.com",
-    databaseURL: "https://savemom-webapp-admin.firebaseio.com",
-    projectId: "savemom-webapp-admin",
-    storageBucket: "savemom-webapp-admin.appspot.com",
-    messagingSenderId: "398446336607"
-  };
+   apiKey: "AIzaSyCGDWRSMrL6XS6AIYYGuj39JtzQiG9peUE",
+   authDomain: "allo-baby-sample.firebaseapp.com",
+   databaseURL: "https://allo-baby-sample.firebaseio.com",
+   projectId: "allo-baby-sample",
+   storageBucket: "allo-baby-sample.appspot.com",
+   messagingSenderId: "120488316114"
+ };
   firebase.initializeApp(config);
 
 restService.use(bodyParser.json());
