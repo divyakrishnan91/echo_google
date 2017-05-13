@@ -85,7 +85,7 @@ restService.post('/ai', function(request, response){
                         console.log("inside for");
                         if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
-                                msg = "Hey mom! Here is what I found . Your baby should be growing and your baby's length is " + datas[i].babydevelopment + "baby size is " + datas[i].babysize + "and weight is " + datas[i].weight ;
+                                msg = "Hey mom! Here is what I found . Your baby should be growing and your baby's length is " + datas[i].length + "baby size is in the size of " + datas[i].babysize + "and weight is " + datas[i].weight ;
 		 return response.json({
                   speech: msg,
                   displayText: msg,
@@ -114,7 +114,27 @@ restService.post('/ai', function(request, response){
                         }
                  }
                 });
-}
+} else if(request.body.result.action === 'babydev') {
+                console.log("sharing weekinfo");
+                var msg = '';
+                 var ref = firebase.database().ref("/symptoms");
+                ref.once('value')
+                 .then(function (snap) {
+                 var datas = snap.val();
+                 //res.send(datas);
+                 for(var i=0; i<datas.length; i++){
+                        console.log("inside for");
+                        if(datas[i].currentweek == 1){
+                                console.log("inside if",datas[i]);
+                                msg = "Here are the common symptoms durring"+ datas[i].week + " " + datas[i].sydata +".We recommend you to consult your doctor if you have any other issues" ;
+                          return response.json({
+                  speech: msg,
+                  displayText: msg,
+                  source: 'echo-google'});
+
+                        }
+                 }
+                });
 });
 
 restService.post('/echo', function(req, res) {
