@@ -61,7 +61,6 @@ restService.post('/ai', function(request, response){
 		 console.log('snap.val()', snap.val());
 		 console.log("req.body", req.body);
 		 var datas = snap.val();
-		 console.log("datas", datas);
 		 //res.send(datas);
 		 for(var i=0; i<datas.length; i++){
 		 	console.log("inside for");
