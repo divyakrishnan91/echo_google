@@ -114,7 +114,7 @@ restService.post('/ai', function(request, response){
                         }
                  }
                 });
-} else if(request.body.result.action === 'babydev') {
+} else if(request.body.result.action === 'health_symptoms') {
                 console.log("sharing weekinfo");
                 var msg = '';
                  var ref = firebase.database().ref("/symptoms");
