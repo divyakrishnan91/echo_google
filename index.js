@@ -65,19 +65,18 @@ restService.post('/ai', function(request, response){
 		 	if(datas[i].currentweek == 1){
 		 		console.log("inside if",datas[i]);
 		 		msg = datas[i].yourbody;
+				 return response.json({
+                  speech: msg,
+                  displayText: msg,
+                  source: 'echo-google'});
 		 	}
 		 }
 		});
-  			return response.json({
-	          speech: msg,
-	          displayText: msg,
-	         source: 'echo-google'});
 
  }  else if(request.body.result.action === 'babyaction') {
                 console.log("sharing weekinfo");
                 var msg = '';
                  var ref = firebase.database().ref("/weeklyinfo");
-
                 ref.once('value')
                  .then(function (snap) {
                  var datas = snap.val();
@@ -87,18 +86,17 @@ restService.post('/ai', function(request, response){
                         if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
                                 msg = "Hey mom! Here is what I found . Your baby should be growing and your baby's length is " + datas[i].babydevelopment + "baby size is " + datas[i].babysize + "and weight is " + datas[i].weight ;
-                        }
-                 }
-                });
-                        return response.json({
+		 return response.json({
                   speech: msg,
                   displayText: msg,
-                  source: 'echo-google'});
+                  source: 'echo-google'});                       
+ }
+                 }
+                });
   }  else if(request.body.result.action === 'babydev') {
                 console.log("sharing weekinfo");
-                var msg = ' ';
+                var msg = '';
                  var ref = firebase.database().ref("/weeklyinfo");
-
                 ref.once('value')
                  .then(function (snap) {
                  var datas = snap.val();
@@ -108,14 +106,14 @@ restService.post('/ai', function(request, response){
                         if(datas[i].currentweek == 1){
                                 console.log("inside if",datas[i]);
                                 msg = datas[i].babydevelopment;
+			  return response.json({
+                  speech: msg,
+                  displayText: msg,
+                  source: 'echo-google'});
 				
                         }
                  }
                 });
-                        return response.json({
-                  speech: msg,
-                  displayText: msg,
-                  source: 'echo-google'});
 }
 });
 
