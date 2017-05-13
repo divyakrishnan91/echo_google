@@ -135,6 +135,7 @@ restService.post('/ai', function(request, response){
                         }
                  }
                 });
+}
 });
 
 restService.post('/echo', function(req, res) {
